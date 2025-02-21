@@ -1,0 +1,30 @@
+{
+    "todolist": [
+        {
+          "title": "Buy groceries",
+          "description": "Purchase milk, eggs, bread, and vegetables from the supermarket.",
+          "date": "2025-02-22"
+        },
+        {
+          "title": "Meeting with client",
+          "description": "Discuss project updates and future plans with the client at their office.",
+          "date": "2025-02-23"
+        },
+        {
+          "title": "Workout session",
+          "description": "Go to the gym for a 1-hour workout including cardio and strength training.",
+          "date": "2025-02-24"
+        },
+        {
+          "title": "Submit project report",
+          "description": "Finalize and submit the project report to the manager before the deadline.",
+          "date": "2025-02-25"
+        },
+        {
+          "title": "Doctor's appointment",
+          "description": "Routine check-up with Dr. Smith at the downtown clinic.",
+          "date": "2025-02-26"
+        }
+      ]
+      
+}
