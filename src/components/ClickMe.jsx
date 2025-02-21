@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 const ClickMe = () => {
   return (
     <div>
-      <Button>Click Me</Button>
+        
+      <Button variant="outline">Click Me</Button>
     </div>
   );
 };

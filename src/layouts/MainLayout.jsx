@@ -1,11 +1,10 @@
 import React from "react";
-import Nav from "@/components/ui/Nav";
+import Nav from "@/components/Nav";
 import { Outlet } from "react-router-dom";
-
 
 const MainLayout = () => {
   return (
-    <div>
+    <div className="container mx-auto flex justify-center flex-col items-center">
       <Nav />
       <Outlet />
     </div>

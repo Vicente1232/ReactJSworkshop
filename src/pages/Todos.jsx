@@ -13,12 +13,20 @@ import TodoCard from "@/components/TodoCard";
 import axios from "axios";
 
 const Todos = () => {
-  const [name, setName] = useState("");
-  const [todo, setTodo] = useState("");
-  const [date, setDate] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    const response = axios.get("http://localhost:3000/todolist");
+    const fetchTodo = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/todolist");
+        setData(response.data);
+
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchTodo();
   }, []);
 
   return (
@@ -30,7 +38,9 @@ const Todos = () => {
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-y-5 items-center">
-            <TodoCard name={name} todo={todo} date={date}/>
+            {data.map((todo, index) => (
+              <TodoCard key={index} data={todo} />
+            ))}
           </div>
         </CardContent>
         <CardFooter className="flex justify-between">
