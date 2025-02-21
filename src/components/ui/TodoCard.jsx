@@ -6,17 +6,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
-const TodoCard = ({ name, todo, date }) => {
+const TodoCard = ({ data }) => {
   return (
     <div>
       <Card className="w-[600px]">
         <CardHeader>
-          <CardTitle>={name}</CardTitle>
+          <CardTitle>
+            <Link to={`todo/${data.id}`}>{data.title}</Link>
+          </CardTitle>
         </CardHeader>
-        <CardContent>{todo}</CardContent>
+        <CardContent>{data.description}</CardContent>
         <CardFooter className="flex justify-between">
-          <h1>{date}</h1>
+          <h1>{data.date}</h1>
         </CardFooter>
       </Card>
     </div>
