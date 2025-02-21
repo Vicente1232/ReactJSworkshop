@@ -26,7 +26,7 @@ const AddTodo = () => {
   const handleSubmit = async () => {
     try {
       const response  = await axios.post("http://localhost:3000/todolist", {
-        id,
+        id: id.toString(),
         title,
         description,
         date,
